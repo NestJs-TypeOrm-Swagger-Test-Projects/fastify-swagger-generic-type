@@ -1,8 +1,9 @@
-import { ApiExtraModels } from "@nestjs/swagger";
+import { ApiExtraModels, ApiProperty } from "@nestjs/swagger";
 import { QueryResult } from "./query-result.model";
 
-@ApiExtraModels(QueryResult)
 export class EntityClass {
+    @ApiProperty()
     id: string;
+    @ApiProperty()
     name: string;
 }

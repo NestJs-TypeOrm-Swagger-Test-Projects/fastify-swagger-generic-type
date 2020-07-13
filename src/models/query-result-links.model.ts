@@ -1,10 +1,13 @@
 import { QueryResultLastLink } from "./query-result-last-link.model";
-import { ApiExtraModels } from "@nestjs/swagger";
+import { ApiExtraModels, ApiPropertyOptional, ApiProperty } from "@nestjs/swagger";
 
-@ApiExtraModels(QueryResultLinks)
 export class QueryResultLinks {
+    @ApiPropertyOptional()
     first: string | null;
+    @ApiPropertyOptional()
     prev: string | null;
+    @ApiPropertyOptional()
     next: string | null;
+    @ApiProperty({ type: () => QueryResultLastLink })
     last?: QueryResultLastLink;
 }

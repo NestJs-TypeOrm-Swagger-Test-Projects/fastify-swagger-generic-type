@@ -1,7 +1,8 @@
-import { ApiExtraModels } from "@nestjs/swagger";
+import { ApiExtraModels, ApiProperty } from "@nestjs/swagger";
 
-@ApiExtraModels(QueryResultLastLink)
 export class QueryResultLastLink {
+    @ApiProperty()
     name: string;
+    @ApiProperty()
     url: string;
 }
